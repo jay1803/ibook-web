@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -35,8 +36,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
 }
