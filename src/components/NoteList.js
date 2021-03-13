@@ -6,7 +6,7 @@ import bookService from '../servers/bookServer';
 const NoteItem = ({ annotation }) => {
   return (
     <dl>
-      <dt>
+      <dt className={'style-' + annotation.style}>
         {annotation.selectedText}
       </dt>
       <dd>

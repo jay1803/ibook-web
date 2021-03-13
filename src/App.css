@@ -37,3 +37,27 @@
     transform: rotate(360deg);
   }
 }
+
+.style-0 {
+  border-bottom: 2px solid rgb(255, 129, 129);
+}
+
+.style-1 {
+  background-color: rgb(148, 255, 157);
+}
+
+.style-2 {
+  background-color: #8fe7ff;
+}
+
+.style-3 {
+  background-color: rgb(255, 227, 185);
+}
+
+.style-4 {
+  background-color: rgb(255, 153, 204);
+}
+
+.style-5 {
+  background-color: rgb(225, 154, 255);
+}
