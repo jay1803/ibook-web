@@ -1,5 +1,5 @@
 .App {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -60,4 +60,42 @@
 
 .style-5 {
   background-color: rgb(225, 154, 255);
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+th.book-title {
+  width: 200px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
 }

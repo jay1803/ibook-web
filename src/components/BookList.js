@@ -6,12 +6,18 @@ import _ from 'lodash';
 
 const BookItem = ({ book }) => {
   const bookId = book.id;
+  const progress = book.progress * 100;
   return (
-    <li>
-      <Link to={`/books/${bookId}`}>
-        {book.title}
-      </Link>
-    </li>
+    <tr>
+      <td><img src={book.coverURL} alt={book.title} width="100" /></td>
+      <td>
+        <Link to={`/books/${bookId}`}>
+          {book.title}
+        </Link>
+      </td>
+      <td>{book.author}</td>
+      <td>{progress}%</td>
+    </tr>
   );
 };
 
@@ -19,11 +25,19 @@ const BookList = ({ books }) => {
   return (
     <main>
       <h1>Books</h1>
-      <ul>
-        {_.isEmpty(books)
-          ? <li>No books</li>
-          : books.map(book => <BookItem key={book.id} book={book} />)}
-      </ul>
+      <table>
+        <thead>
+          <th>Cover</th>
+          <th className="book-title">Book Title</th>
+          <th>Author</th>
+          <th>Progress</th>
+        </thead>
+        <tbody>
+          {_.isEmpty(books)
+            ? <li>No books</li>
+            : books.map(book => <BookItem key={book.id} book={book} />)}
+        </tbody>
+      </table>
     </main>
   );
 };
