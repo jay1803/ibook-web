@@ -9,7 +9,7 @@ const getBooks = async () => {
 const getBookById = async (bookId) => {
   const res = await axios.get(`${baseUrl}/${bookId}`);
   return res.data;
-}
+};
 
 const getChaptersByBookId = async (bookId) => {
   const res = await axios.get(`${baseUrl}/${bookId}/chapters`);
@@ -21,10 +21,9 @@ const getNotesByChapterId = async (bookId, chapterId) => {
   return res.data;
 };
 
-/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
   getBooks,
   getBookById,
   getChaptersByBookId,
   getNotesByChapterId
-}
+};
