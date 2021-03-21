@@ -16,7 +16,7 @@ const BookItem = ({ book }) => {
         </Link>
       </td>
       <td>{book.author}</td>
-      <td>{progress}%</td>
+      <td>{progress.toFixed(2)}%</td>
     </tr>
   );
 };
