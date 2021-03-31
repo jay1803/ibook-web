@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react';
 import bookService from './servers/bookServer';
 
 import BookList from './components/BookList';
+import BookTodo from './components/BookTodo';
 import BookDetail from './components/BookDetail';
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
         <Switch>
           <Route exact path='/books'>
             <BookList books={books} />
+          </Route>
+          <Route exact path='/books-todo'>
+            <BookTodo books={books} />
           </Route>
           <Route exact path='/books/:bookId'>
             <BookDetail />
