@@ -5,12 +5,15 @@ import {
 
 import bookService from '../servers/bookServer';
 import ChapterList from './ChapterList';
+import BookNav from './BookNav';
 
 const BookDetail = () => {
   const match = useRouteMatch('/books/:bookId');
   const bookId = match.params.bookId;
 
   const [book, setBook] = useState('');
+
+  const chapters = [{'title': 'This is title', 'link': '#10'}];
 
   useEffect(() => {
     bookService
@@ -23,9 +26,7 @@ const BookDetail = () => {
   return (
     <main>
       <h1>{book.title}</h1>
-      <div>
-        <ChapterList bookId={bookId} />
-      </div>
+      <ChapterList bookId={bookId} />
     </main>
   );
 };

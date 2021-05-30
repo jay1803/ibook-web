@@ -3,13 +3,14 @@ import _ from 'lodash';
 
 import bookService from '../servers/bookServer';
 import NoteList from './NoteList';
+import BookNav from './BookNav';
 
 const ChapterItem = ({ bookId, chapter }) => {
   if (_.isEmpty(chapter.title)) {
     chapter.title = 'Untitled';
   }
   return (
-    <section>
+    <section id={chapter.id}>
       <h3>* {chapter.title}</h3>
       <NoteList bookId={bookId} chapterId={chapter.id} />
     </section>
@@ -28,10 +29,13 @@ const ChapterList = ({bookId}) => {
   }, []);
 
   return (
-    <div>
-      { _.isEmpty(chapters)
-        ? <li>No notes found.</li>
-        : chapters.map(chapter => <ChapterItem key={chapter.id} bookId={bookId} chapter={chapter} />)}
+    <div className='book-details'>
+      <div className='book-annotations'>
+        { _.isEmpty(chapters)
+          ? <li>No notes found.</li>
+          : chapters.map(chapter => <ChapterItem key={chapter.id} bookId={bookId} chapter={chapter} />)}
+      </div>
+      <BookNav className='book-nav' chapters={chapters} />
     </div>
   );
 };

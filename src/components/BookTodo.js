@@ -8,11 +8,11 @@ const BookItem = ({ book }) => {
   const bookId = book.id;
   const progress = book.progress * 100;
   return (
-      <p>** TODO {book.title}<br/>
+      <span>** TODO {book.title}<br/>
       &nbsp;&nbsp;&nbsp;&nbsp;:PROPERTIES:<br/>
       &nbsp;&nbsp;&nbsp;&nbsp;:AUTHOR:   {book.author}<br/>
-      &nbsp;&nbsp;&nbsp;&nbsp;:END:
-      </p>
+      &nbsp;&nbsp;&nbsp;&nbsp;:END:<br/>
+      </span>
   );
 };
 
