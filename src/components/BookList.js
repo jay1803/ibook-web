@@ -56,7 +56,6 @@ const BookList = ({ books }) => {
           <th>Progress</th>
         </thead>
         <tbody>
-          books
           {_.isEmpty(books) ? <li>No books</li> : books.map(book => <BookItem key={book.id} book={book} />)}
         </tbody>
       </table>
