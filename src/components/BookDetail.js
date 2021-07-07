@@ -13,8 +13,6 @@ const BookDetail = () => {
 
   const [book, setBook] = useState('');
 
-  const chapters = [{'title': 'This is title', 'link': '#10'}];
-
   useEffect(() => {
     bookService
       .getBookById(bookId)
