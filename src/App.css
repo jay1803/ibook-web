@@ -39,7 +39,7 @@
 }
 
 .style-0 {
-  border-bottom: 2px solid rgb(255, 129, 129);
+  text-decoration: underline red 2px;
 }
 
 .style-1 {
