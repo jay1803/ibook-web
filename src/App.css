@@ -109,10 +109,14 @@ table {
 }
 
 .book-nav {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
   min-width: 320px;
   padding-left: 20px;
   left: calc(50vw + 160px);
+  overflow-y: scroll;
+  max-height: calc(100vh - 40px);
 }
 
 .book-report {
