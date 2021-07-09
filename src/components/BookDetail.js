@@ -5,7 +5,6 @@ import {
 
 import bookService from '../servers/bookServer';
 import ChapterList from './ChapterList';
-import BookNav from './BookNav';
 
 const BookDetail = () => {
   const match = useRouteMatch('/books/:bookId');
