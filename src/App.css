@@ -39,7 +39,8 @@
 }
 
 .style-0 {
-  text-decoration: underline red 2px;
+  font-size: 1.212rem;
+  font-weight: bold;
 }
 
 .style-1 {
@@ -105,7 +106,6 @@ table {
 }
 
 .book-annotations {
-  max-width: 640px;
 }
 
 .book-nav {
