@@ -11,7 +11,6 @@ const ChapterItem = ({ bookId, chapter }) => {
   }
   return (
     <section id={chapter.id}>
-      <h3>* {chapter.title}</h3>
       <NoteList bookId={bookId} chapterId={chapter.id} />
     </section>
   );

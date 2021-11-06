@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl = '/v1/books';
+const baseUrl = 'http://localhost:4000/v1/books';
 
 const getBooks = async () => {
   const res = await axios.get(baseUrl);
