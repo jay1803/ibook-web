@@ -7,7 +7,7 @@ const NoteItem = ({ annotation }) => {
   return (
     <dl>
       <dt className={'style-' + annotation.style}>
-        &nbsp;&nbsp;{annotation.selectedText}
+        {annotation.selectedText}
       </dt>
       <dd>
         {annotation.comment}
