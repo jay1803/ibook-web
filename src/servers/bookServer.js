@@ -3,7 +3,6 @@ const baseUrl = 'http://localhost:4000/v1/books';
 
 const getBooks = async () => {
   const res = await axios.get(baseUrl);
-  console.log(res.data);
   return res.data;
 };
 

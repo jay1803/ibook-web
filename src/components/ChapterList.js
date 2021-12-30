@@ -34,7 +34,7 @@ const ChapterList = ({bookId}) => {
           ? <li>No notes found.</li>
           : chapters.map(chapter => <ChapterItem key={chapter.id} bookId={bookId} chapter={chapter} />)}
       </div>
-      <BookNav className='book-nav' chapters={chapters} />
+      <BookNav key={chapters.id} className='book-nav' chapters={chapters} />
     </div>
   );
 };
