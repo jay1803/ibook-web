@@ -4,16 +4,26 @@ import _ from 'lodash';
 import bookService from '../servers/bookServer';
 
 const NoteItem = ({ annotation }) => {
+  if (annotation.comment) {
   return (
-    <dl>
-      <dt className={'style-' + annotation.style}>
+    <div>
+      <p className={'style-' + annotation.style}>
         {annotation.selectedText}
-      </dt>
-      <dd>
-        {annotation.comment}
-      </dd>
-    </dl>
-  );
+        &nbsp;
+      </p>
+      <p>
+        #+begin_comment<br/>
+        {annotation.comment}<br/>
+        #+end_comment
+      </p>
+    </div>
+  )} else {
+    return (
+      <p className={'style-' + annotation.style}>
+        {annotation.selectedText}
+      </p>
+    )
+  };
 };
 
 const NoteList = ({ bookId, chapterId }) => {
